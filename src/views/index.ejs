@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <title>My Telegram Bot</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+        Custom Select Box
+    </div>
+    <div class="select_wrap">
+        <ul class="default_option">
+            <li>
+                <div class="option pizza">
+                    <div class="icon"></div>
+                    <p>Pizzas</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="select_ul">
+            <li>
+                <div class="option pizza">
+                    <div class="icon"></div>
+                    <p>Pizzas</p>
+                </div>
+            </li>
+            <li>
+                <div class="option burger">
+                    <div class="icon"></div>
+                    <p>Burget</p>
+                </div>
+            </li>
+            <li>
+                <div class="option ice">
+                    <div class="icon"></div>
+                    <p>Ice Cream</p>
+                </div>
+            </li>
+            <li>
+                <div class="option fries">
+                    <div class="icon"></div>
+                    <p>Fried Potatoes</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(".default_option").click(function(){
+        $(this).parent().toggleClass("active");
+    })
+
+    $(".select_ul li").click(function(){
+        const currentele = $(this).html();
+        $(".default_option li").html(currentele);
+        $(this).parents(".select_wrap").removeClass("active");
+    })
+</script>
+</body>
+<footer>
+</footer>
+
+</html>
