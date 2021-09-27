@@ -68,7 +68,8 @@ bot.on('message', async function (msg) {
 })
 
 app.get('/telegram/bot/v1', (req, res) => {
-    res.render("index");
+    const groupId = '-509974063';
+    bot.sendMessage(groupId,"hello");
 })
 
 app.listen(process.env.PORT || 3000)
